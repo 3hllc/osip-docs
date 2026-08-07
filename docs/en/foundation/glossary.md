@@ -12,6 +12,7 @@ This glossary establishes the preferred meanings of terms used across OSIP speci
 | **Local First** | Required functions continue on the trusted local environment during WAN loss. Cloud services may enhance a function, but cannot be its only control path unless explicitly classified as cloud-dependent. |
 | **Cloud Enhanced** | A cloud capability that is optional for normal local operation, such as remote access, opt-in backup, fleet insights, or heavyweight inference. |
 | **Reference apartment** | The 165 m² real-world validation environment used to prove designs, commissioning procedures, failure recovery, and evidence before a pattern is productized. |
+| **Reference deployment** | A real environment used to validate an OSIP capability profile. The Reference Apartment is the first such deployment; it does not define the platform's scope or future supported space types. |
 | **Installer Edition** | A future repeatable delivery package derived from validated reference designs, including installation, commissioning, support, and acceptance material. |
 | **Adapter** | A bounded component that translates a vendor, protocol, or product-specific interface into OSIP contracts. It prevents implementation details from becoming domain-model dependencies. |
 | **Integration boundary** | The interface at which external payloads, identities, credentials, availability, and errors are normalized before general OSIP services consume them. |

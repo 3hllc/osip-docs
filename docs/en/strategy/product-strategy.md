@@ -2,7 +2,7 @@
 
 ## Strategic intent
 
-OSIP creates a commercial platform for spatial intelligence, beginning with residential environments. The business is not a one-off smart-home installation practice: every validated installation pattern should become a reusable product, service, integration, or operational capability.
+OSIP creates a commercial platform for spatial intelligence that can be applied to any physical environment. The business is not a one-off smart-home installation practice: every validated installation pattern should become a reusable product, service, integration, or operational capability. Residential space is the first validation profile, not the platform boundary.
 
 The reference apartment validates hypotheses under real conditions. Its value is the evidence and reusable design it produces, not the uniqueness of its equipment list.
 

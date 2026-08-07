@@ -2,7 +2,7 @@
 
 ## Security objective
 
-OSIP protects people, their home, and their data while allowing maintainable installation and support. The initial threat model includes compromised IoT devices, stolen credentials, a malicious or compromised cloud account, accidental installer error, insecure local networks, supply-chain issues, and physical access to local equipment.
+OSIP protects people, their spaces, and their data while allowing maintainable installation and support. The initial threat model includes compromised IoT devices, stolen credentials, a malicious or compromised cloud account, accidental installer error, insecure local networks, supply-chain issues, and physical access to local equipment.
 
 ## Trust zones
 

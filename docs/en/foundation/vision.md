@@ -4,7 +4,7 @@
 
 Most smart homes are collections of unrelated devices and automations. Users learn device names, application limitations, and vendor-specific routines; the system can switch a device but rarely understands why that action would be useful in a particular place at a particular time.
 
-OSIP aims to make residential spaces intelligible and responsive. The environment understands its physical structure, the capabilities available in each area, relevant context, and the intent behind a permitted request. It should help people live comfortably and safely without making them surrender local control, privacy, or the ability to understand what the environment is doing.
+OSIP aims to make physical spaces intelligible and responsive. The environment understands its physical structure, the capabilities available in each area, relevant context, and the intent behind a permitted request. It should help people work, live, and receive services comfortably and safely without making them surrender local control, privacy, or the ability to understand what the environment is doing.
 
 ## Spatial intelligence
 
@@ -23,4 +23,3 @@ The reference apartment gives OSIP its first real constraints. Installer Edition
 ## What OSIP will not sacrifice
 
 OSIP will not trade critical local operation for a polished cloud experience, reduce people to opaque behavioural data, or make a single vendor indispensable to the platform. Progress is measured by reliable, explainable, repeatable value rather than by the number of connected devices.
-
