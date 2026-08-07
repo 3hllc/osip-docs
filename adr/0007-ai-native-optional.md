@@ -1,12 +1,12 @@
 ---
-title: ADR-0007 — AI-Native, Optional Operation
+title: ADR-0007 — AI-Native, Runtime-Optional Operation
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [ai, privacy, resilience]
 ---
 
-# ADR-0007 — AI-Native, Optional Operation
+# ADR-0007 — AI-Native, Runtime-Optional Operation
 
 ## Context
 
@@ -14,7 +14,7 @@ AI can improve explanation, recommendations, contextual interpretation, voice in
 
 ## Decision
 
-AI is a first-class platform capability with defined context inputs, tool permissions, evaluation, observability, and privacy rules. It may recommend or orchestrate only through approved policy and command boundaries. Normal automation and safety-relevant local functions remain available without AI. Both local and cloud inference may be used where their data and failure boundaries are documented.
+AI is architecturally native: it is designed into OSIP context, contracts, policy, evaluation, observability, privacy, and user experience rather than added as an afterthought. AI is runtime-optional: normal automation and safety-relevant local functions remain available without an AI service. AI may recommend or orchestrate only through approved policy and command boundaries. Both local and cloud inference may be used where their data and failure boundaries are documented.
 
 ## Alternatives considered
 

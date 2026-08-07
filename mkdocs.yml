@@ -71,6 +71,7 @@ plugins:
             Project Charter: Устав проекта
             Vision: Видение
             Project Principles: Принципы проекта
+            Project History: История проекта
             Glossary: Глоссарий
             Strategy: Стратегия
             Product Strategy: Продуктовая стратегия
@@ -86,14 +87,24 @@ plugins:
             Zigbee Mesh and MQTT Bridge: Zigbee Mesh и MQTT-мост
             API Architecture: Архитектура API
             Security Architecture: Архитектура безопасности
+            Deployment Architecture: Архитектура развёртывания
             Standards: Стандарты
             Documentation Standards: Стандарты документации
+            Integration Standards: Стандарты интеграций
+            ADR Process: Процесс ADR
+            Diagram Standards: Стандарты диаграмм
             AI: ИИ
             AI Architecture: Архитектура ИИ
+            AI Capability Roadmap: Дорожная карта возможностей ИИ
             Product: Продукт
+            Commercial and Installer Edition Strategy: Коммерческая стратегия и Installer Edition
             Reference Designs: Референсные проекты
             Reference Apartment: Референсная квартира
+            Reference Apartment Engineering Design: Инженерный проект референсной квартиры
             Operations: Эксплуатация
+            Deployment and Recovery: Развёртывание и восстановление
+            Monitoring and Observability: Мониторинг и наблюдаемость
+            Installer Playbook: Руководство инсталлятора
             Collaboration: Совместная работа
             Knowledge: База знаний
             Open Questions: Открытые вопросы
@@ -101,6 +112,9 @@ plugins:
             Constraints: Ограничения
             Risks: Риски
             Decision Log: Журнал решений
+            Knowledge Extraction: Извлечение знаний
+            Research Summary: Сводка исследований
+            Technology Radar: Технологический радар
 
 nav:
   - Home: index.md
@@ -110,6 +124,7 @@ nav:
       - Vision: foundation/vision.md
       - Project Principles: foundation/project-principles.md
       - Glossary: foundation/glossary.md
+      - Project History: foundation/project-history.md
   - Strategy:
       - Overview: strategy/README.md
       - Product Strategy: strategy/product-strategy.md
@@ -126,18 +141,29 @@ nav:
       - Zigbee Mesh and MQTT Bridge: architecture/zigbee-mesh-and-mqtt-bridge.md
       - API Architecture: architecture/api-architecture.md
       - Security Architecture: architecture/security-architecture.md
+      - Deployment Architecture: architecture/deployment-architecture.md
   - Standards:
       - Overview: standards/README.md
       - Documentation Standards: standards/documentation-standards.md
+      - Integration Standards: standards/integration-standards.md
+      - ADR Process: standards/adr-process.md
+      - Diagram Standards: standards/diagram-standards.md
   - AI:
       - Overview: ai/README.md
       - AI Architecture: ai/ai-architecture.md
+      - AI Capability Roadmap: ai/ai-capability-roadmap.md
   - Product:
       - Overview: product/README.md
+      - Commercial and Installer Edition Strategy: product/commercial-strategy.md
   - Reference Designs:
       - Overview: reference-designs/README.md
       - Reference Apartment: reference-designs/reference-apartment.md
-  - Operations: operations/README.md
+      - Reference Apartment Engineering Design: reference-designs/reference-apartment-engineering.md
+  - Operations:
+      - Overview: operations/README.md
+      - Deployment and Recovery: operations/deployment-and-recovery.md
+      - Monitoring and Observability: operations/observability.md
+      - Installer Playbook: operations/installer-playbook.md
   - Collaboration: collaboration/README.md
   - Knowledge:
       - Overview: knowledge/README.md
@@ -146,3 +172,6 @@ nav:
       - Constraints: knowledge/constraints.md
       - Risks: knowledge/risks.md
       - Decision Log: knowledge/decision-log.md
+      - Knowledge Extraction: knowledge/knowledge-extraction.md
+      - Research Summary: knowledge/research-summary.md
+      - Technology Radar: knowledge/technology-radar.md
