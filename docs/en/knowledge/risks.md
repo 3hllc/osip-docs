@@ -9,7 +9,7 @@ Likelihood and impact use **Low**, **Medium**, or **High**. Risk owners are role
 ## Active register
 
 | ID | Risk | Likelihood | Impact | Mitigation and trigger | Owner role |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | R-001 | Zigbee radio coverage or routing proves unreliable in portions of the reference apartment. | Medium | High | Design powered-router placement, perform a site survey and router-loss tests. Trigger: recurring unavailable devices, command latency beyond acceptance criteria, or route instability. | Reference-design lead |
 | R-002 | Vendor-specific integration payloads leak into general automation or AI logic. | Medium | High | Enforce adapter contracts and review topic/schema usage. Trigger: a core consumer subscribes to raw adapter topics or uses vendor identity as domain identity. | Architecture lead |
 | R-003 | A cloud dependency is introduced into a function declared local-first. | Medium | High | Maintain an outage matrix and run WAN-loss acceptance tests. Trigger: loss of WAN blocks local command, identity, or required state. | Platform lead |
