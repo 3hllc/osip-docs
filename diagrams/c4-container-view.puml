@@ -1,0 +1,29 @@
+@startuml c4-container-view
+!include <C4/C4_Container>
+title OSIP — Local Runtime Containers (C4 Level 2)
+
+Person(resident, "Resident")
+System_Boundary(osip, "OSIP local installation") {
+  Container(ui, "Local experience", "Web/mobile/voice clients", "Presents state, explanations, and manual controls.")
+  Container(core, "Domain and policy service", "Platform service", "Owns identities, policy evaluation, configuration, and audit decisions.")
+  Container(context, "Spatial and context service", "Platform service", "Projects the digital twin and derives confidence-aware context.")
+  Container(automation, "Automation and task orchestrator", "Platform service", "Evaluates permitted intents and coordinates actions.")
+  Container(bus, "Event backbone", "MQTT initially", "Authenticated transport for events and routed commands.")
+  Container(adapter, "Integration adapters", "Adapters", "Normalise protocol/vendor systems and execute authorised commands.")
+  ContainerDb(state, "Local projections and configuration", "Database", "Stores configuration, durable projections, and audit evidence.")
+}
+System_Ext(devices, "Devices / integration products", "Protocols and bridges")
+System_Ext(cloud, "Cloud and AI services", "Optional enhancement")
+
+Rel(resident, ui, "Uses")
+Rel(ui, core, "Queries and controlled requests")
+Rel(core, state, "Reads/writes configuration and audit")
+Rel(core, context, "Spatial/configuration changes")
+Rel(context, state, "Projects state and context")
+Rel(bus, context, "Events")
+Rel(bus, automation, "Events and commands")
+Rel(automation, core, "Policy decisions and audit")
+Rel(adapter, bus, "Normalised events and commands")
+Rel(adapter, devices, "Vendor/protocol traffic")
+Rel(core, cloud, "Approved optional egress")
+@enduml

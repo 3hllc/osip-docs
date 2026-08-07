@@ -1,0 +1,21 @@
+@startuml c4-system-context
+!include <C4/C4_Context>
+title OSIP — System Context (C4 Level 1)
+
+Person(resident, "Resident", "Uses and supervises the intelligent living environment.")
+Person(installer, "Installer / Operator", "Commissions, services, and diagnoses supported installations.")
+System(osip, "OSIP", "Open Spatial Intelligence Platform: local domain, context, policy, automation, and integration boundaries.")
+System_Ext(devices, "Devices and engineering systems", "Sensors, actuators, HVAC, locks, safety systems, and robots.")
+System_Ext(integration, "Integration products", "Home Assistant, Zigbee2MQTT, ESPHome, and protocol bridges. Replaceable adapters.")
+System_Ext(bus, "Local message backbone", "MQTT initially; transport is replaceable behind OSIP contracts.")
+System_Ext(cloud, "Optional cloud services", "Remote access, backup, analytics, and fleet services.")
+System_Ext(ai, "Approved AI providers", "Local or cloud inference for optional assistance and reasoning.")
+
+Rel(resident, osip, "Interacts locally; retains manual control")
+Rel(installer, osip, "Commissions and operates", "authenticated tools")
+Rel(devices, integration, "Protocol traffic")
+Rel(integration, bus, "Normalised device events and commands")
+Rel(bus, osip, "Versioned events and routed commands")
+Rel(osip, cloud, "Opt-in enhancement", "outbound, least privilege")
+Rel(osip, ai, "Optional context and recommendations", "policy-controlled")
+@enduml

@@ -1,0 +1,148 @@
+site_name: OSIP Knowledge Base
+site_description: Canonical engineering knowledge base for the Open Spatial Intelligence Platform.
+repo_name: OSIP
+docs_dir: docs
+use_directory_urls: true
+hooks:
+  - scripts/mkdocs_hooks.py
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: EN
+          build: true
+        - locale: ru
+          name: RU
+          build: true
+          nav_translations:
+            Home: Главная
+            Foundation: Основа
+            Overview: Обзор
+            Project Charter: Устав проекта
+            Vision: Видение
+            Project Principles: Принципы проекта
+            Glossary: Глоссарий
+            Strategy: Стратегия
+            Product Strategy: Продуктовая стратегия
+            Roadmap: Дорожная карта
+            Architecture: Архитектура
+            Architecture Overview: Обзор архитектуры
+            Context Model: Модель контекста
+            Domain Model: Доменная модель
+            Event Model: Модель событий
+            Device Model: Модель устройств
+            Digital Twin: Цифровой двойник
+            Message Bus: Шина сообщений
+            Zigbee Mesh and MQTT Bridge: Zigbee Mesh и MQTT-мост
+            API Architecture: Архитектура API
+            Security Architecture: Архитектура безопасности
+            Standards: Стандарты
+            Documentation Standards: Стандарты документации
+            AI: ИИ
+            AI Architecture: Архитектура ИИ
+            Product: Продукт
+            Reference Designs: Референсные проекты
+            Reference Apartment: Референсная квартира
+            Operations: Эксплуатация
+            Collaboration: Совместная работа
+            Knowledge: База знаний
+            Open Questions: Открытые вопросы
+            Assumptions: Допущения
+            Constraints: Ограничения
+            Risks: Риски
+            Decision Log: Журнал решений
+
+nav:
+  - Home: index.md
+  - Foundation:
+      - Overview: foundation/README.md
+      - Project Charter: foundation/project-charter.md
+      - Vision: foundation/vision.md
+      - Project Principles: foundation/project-principles.md
+      - Glossary: foundation/glossary.md
+  - Strategy:
+      - Overview: strategy/README.md
+      - Product Strategy: strategy/product-strategy.md
+      - Roadmap: strategy/roadmap.md
+  - Architecture:
+      - Overview: architecture/README.md
+      - Architecture Overview: architecture/architecture-overview.md
+      - Context Model: architecture/context-model.md
+      - Domain Model: architecture/domain-model.md
+      - Event Model: architecture/event-model.md
+      - Device Model: architecture/device-model.md
+      - Digital Twin: architecture/digital-twin.md
+      - Message Bus: architecture/message-bus.md
+      - Zigbee Mesh and MQTT Bridge: architecture/zigbee-mesh-and-mqtt-bridge.md
+      - API Architecture: architecture/api-architecture.md
+      - Security Architecture: architecture/security-architecture.md
+  - Standards:
+      - Overview: standards/README.md
+      - Documentation Standards: standards/documentation-standards.md
+  - AI:
+      - Overview: ai/README.md
+      - AI Architecture: ai/ai-architecture.md
+  - Product:
+      - Overview: product/README.md
+  - Reference Designs:
+      - Overview: reference-designs/README.md
+      - Reference Apartment: reference-designs/reference-apartment.md
+  - Operations: operations/README.md
+  - Collaboration: collaboration/README.md
+  - Knowledge:
+      - Overview: knowledge/README.md
+      - Open Questions: knowledge/open-questions.md
+      - Assumptions: knowledge/assumptions.md
+      - Constraints: knowledge/constraints.md
+      - Risks: knowledge/risks.md
+      - Decision Log: knowledge/decision-log.md

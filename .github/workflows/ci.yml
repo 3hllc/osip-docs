@@ -1,0 +1,21 @@
+name: Documentation checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-docs:
+    name: Build MkDocs site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install documentation dependencies
+        run: pip install mkdocs-material mkdocs-static-i18n
+      - name: Install local PlantUML renderer
+        run: sudo apt-get update && sudo apt-get install --yes plantuml
+      - name: Build documentation strictly
+        run: mkdocs build --strict
