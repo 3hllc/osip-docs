@@ -24,7 +24,7 @@ OSIP is not another collection of device dashboards, a Home Assistant distributi
 The first installation is an approximately 165 m² reference apartment. It is an engineering laboratory, validation environment, demonstrator, and source of real installation requirements—not the end product. The platform is designed for a commercial business and for a useful progression:
 
 ```mermaid
-flowchart LR
+flowchart TB
   A[Reference Apartment] --> B[Installer Edition]
   B --> C[Commercial Installations]
   C --> D[OSIP Platform]

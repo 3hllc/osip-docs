@@ -16,6 +16,8 @@ Diagrams are reviewable engineering source, not decorative screenshots. Their so
 
 Each diagram names its level and audience, shows only the decision-relevant boundary, and labels interfaces with a protocol or contract type where useful. It distinguishes OSIP core services from external systems, shows trust boundaries for sensitive flows, and avoids implying a vendor dependency merely by using a vendor example.
 
+Prefer a top-to-bottom layout for flow, roadmap, C4, deployment, and topology diagrams so that a diagram remains legible in the documentation column and gains height before it gains width. Keep a left-to-right layout only when direction itself communicates meaning or the notation requires it, such as the participants of a sequence diagram. Do not force an entity-relationship diagram into a direction it does not support.
+
 Diagrams do not contain secrets, personal layouts, credentials, or unredacted production addresses. A diagram that includes a physical apartment plan uses the agreed privacy classification and access policy.
 
 ## Validation

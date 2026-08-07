@@ -17,7 +17,7 @@ AI is a native OSIP capability for interpreting approved context, explaining the
 An AI component receives only the contextual information and tools permitted for its role. A tool invocation becomes a typed intent, which is evaluated by policy and authorization before an orchestrator issues a command. The system records the input reference, model/tool version, proposed intent, policy result, actor, and observed outcome. Secrets, unrestricted broker access, and raw administrative commands are never model tools.
 
 ```mermaid
-flowchart LR
+flowchart TB
   C[Approved context] --> M[AI model]
   M --> I[Typed recommendation or intent]
   I --> P{Policy, safety, authorization}

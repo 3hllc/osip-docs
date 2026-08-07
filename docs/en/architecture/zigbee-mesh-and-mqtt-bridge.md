@@ -11,8 +11,9 @@ Zigbee is a low-power IEEE 802.15.4 device network. Its mesh carries radio traff
 The Zigbee network belongs to the physical-device integration layer. An integration adapter exposes its observations and accepted commands to the OSIP message bus. The adapter may initially be Zigbee2MQTT; Home Assistant ZHA, a commercial gateway, or another implementation may replace it if it preserves the OSIP integration contract.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph ZM[Zigbee mesh]
+        direction TB
         E[Battery end device]
         R[Powered router]
         C[Coordinator]

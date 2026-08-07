@@ -5,7 +5,7 @@
 The roadmap is capability-led rather than date-led. Dates become commitments only after dependencies, owners, acceptance evidence, and operating constraints are known. A phase may overlap discovery for the next phase, but it cannot declare success by producing documents or prototypes alone.
 
 ```mermaid
-flowchart LR
+flowchart TB
   F[Phase 0: Foundation] --> R[Reference Apartment]
   R --> I[Installer Edition]
   I --> C[Commercial Installations]

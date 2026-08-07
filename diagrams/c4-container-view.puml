@@ -1,6 +1,7 @@
 @startuml c4-container-view
 !include <C4/C4_Container>
 title OSIP — Local Runtime Containers (C4 Level 2)
+LAYOUT_TOP_DOWN()
 
 Person(resident, "Resident")
 System_Boundary(osip, "OSIP local installation") {
