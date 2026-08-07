@@ -1,7 +1,7 @@
 """Build hooks for OSIP documentation.
 
 PlantUML source remains versioned in the repository-level ``diagrams/`` folder.
-Before MkDocs renders pages, this hook creates local SVG derivatives under
+Before MkDocs collects documentation files, this hook creates local SVG derivatives under
 ``docs/en/assets/plantuml/``. Generated files are deliberately ignored by Git.
 """
 
@@ -13,15 +13,15 @@ import subprocess
 from pathlib import Path
 
 
-def on_pre_build(config, **kwargs):
-    """Render every repository PlantUML source to an SVG for this site build."""
+def on_config(config, **kwargs):
+    """Render PlantUML early enough for MkDocs to register the SVG files."""
     project_root = Path(config.config_file_path).parent
     source_dir = project_root / "diagrams"
     output_dir = project_root / "docs" / "en" / "assets" / "plantuml"
     sources = sorted(source_dir.glob("*.puml"))
 
     if not sources:
-        return
+        return config
 
     plantuml_jar = os.environ.get("PLANTUML_JAR")
     plantuml_bin = os.environ.get("PLANTUML_BIN") or shutil.which("plantuml")
@@ -46,3 +46,5 @@ def on_pre_build(config, **kwargs):
             check=True,
             cwd=project_root,
         )
+
+    return config
