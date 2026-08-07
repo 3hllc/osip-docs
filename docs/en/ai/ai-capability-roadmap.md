@@ -23,4 +23,4 @@ Every capability begins with a concrete user or installer job, defined data inpu
 
 - [AI Architecture](ai-architecture.md)
 - [Digital Twin](../architecture/digital-twin.md)
-- ADR-0007 — AI-Native, Runtime-Optional Operation
+- [ADR-0007 — AI-Native, Runtime-Optional Operation](https://github.com/3hllc/osip-docs/blob/main/adr/0007-ai-native-optional.md)
