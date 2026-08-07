@@ -29,7 +29,9 @@ jobs:
       - name: Install local PlantUML renderer
         run: sudo apt-get update && sudo apt-get install --yes plantuml
       - name: Build documentation site
-        run: mkdocs build --strict --site-url "${{ steps.pages.outputs.base_url }}/"
+        run: |
+          printf 'INHERIT: mkdocs.yml\nsite_url: "%s/"\n' "${{ steps.pages.outputs.base_url }}" > mkdocs-pages.yml
+          mkdocs build --strict --config-file mkdocs-pages.yml
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
