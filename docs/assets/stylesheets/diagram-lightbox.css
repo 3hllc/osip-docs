@@ -1,0 +1,92 @@
+/* Full-screen viewer for PlantUML SVG assets and Mermaid-rendered SVGs. */
+.md-content img[src$=".svg"],
+.md-content .mermaid,
+.md-content .mermaid svg {
+  cursor: zoom-in;
+}
+
+.osip-diagram-lightbox {
+  width: min(96vw, 1600px);
+  height: 94vh;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0.35rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55);
+}
+
+.osip-diagram-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.osip-diagram-lightbox__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 3.2rem;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.osip-diagram-lightbox__title {
+  flex: 1 1 auto;
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.osip-diagram-lightbox__button {
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.osip-diagram-lightbox__button:hover,
+.osip-diagram-lightbox__button:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+.osip-diagram-lightbox__viewport {
+  height: calc(100% - 3.2rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 1rem;
+}
+
+.osip-diagram-lightbox__canvas {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  place-items: center;
+}
+
+.osip-diagram-lightbox__canvas > img,
+.osip-diagram-lightbox__canvas > svg,
+.osip-diagram-lightbox__canvas > .mermaid {
+  display: block;
+  max-width: none;
+  height: auto;
+}
+
+@media (max-width: 44.9375em) {
+  .osip-diagram-lightbox {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .osip-diagram-lightbox__title {
+    font-size: 0.75rem;
+  }
+}

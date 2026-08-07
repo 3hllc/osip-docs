@@ -28,6 +28,17 @@ reference_apartment/ Reference deployment and apartment-specific materials
 
 The documentation repository is the canonical source of knowledge. The MkDocs site, PDFs, presentations, and any external wiki pages are generated or derived views. Do not duplicate a subject: link to its canonical document instead.
 
+## Local documentation preview
+
+Install the documentation dependencies once, ensure that local PlantUML is available, then run the development server:
+
+```powershell
+python -m pip install -r requirements-docs.txt
+python -m mkdocs serve
+```
+
+Mermaid diagrams render in the browser; PlantUML diagrams are rendered to local SVG during the build. Select either rendered diagram to open the zoomable viewer. For a strict production-equivalent check, run `python -m mkdocs build --strict`.
+
 ## Contributing
 
 Use GitHub issues to propose work, document significant technical choices in `adr/`, and keep English and Russian project documents aligned where both versions exist.

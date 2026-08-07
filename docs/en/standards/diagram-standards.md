@@ -20,7 +20,7 @@ Diagrams do not contain secrets, personal layouts, credentials, or unredacted pr
 
 ## Validation
 
-PlantUML sources are rendered locally in CI to SVG before MkDocs collects files. Mermaid is rendered by the site theme from fenced source. A strict MkDocs build validates diagram links; an architectural change is incomplete if its diagram source, rendered asset, and specification diverge.
+PlantUML sources are rendered locally in CI to SVG before MkDocs collects files. Mermaid is rendered by the Mermaid MkDocs plugin from fenced source. Both rendered SVG types open in the built-in diagram viewer when selected; the viewer supports zoom controls, Ctrl/Cmd + mouse wheel, scrolling while enlarged, and Escape to close. A strict MkDocs build validates diagram links; an architectural change is incomplete if its diagram source, rendered asset, and specification diverge.
 
 ## Related documents
 

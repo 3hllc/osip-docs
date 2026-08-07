@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Install documentation dependencies
-        run: pip install mkdocs-material mkdocs-static-i18n
+        run: pip install -r requirements-docs.txt
       - name: Install local PlantUML renderer
         run: sudo apt-get update && sudo apt-get install --yes plantuml
       - name: Render PlantUML diagrams
