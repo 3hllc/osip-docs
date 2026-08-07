@@ -1,7 +1,6 @@
 name: Documentation checks
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -17,5 +16,11 @@ jobs:
         run: pip install mkdocs-material mkdocs-static-i18n
       - name: Install local PlantUML renderer
         run: sudo apt-get update && sudo apt-get install --yes plantuml
+      - name: Render PlantUML diagrams
+        run: |
+          mkdir -p docs/en/assets/plantuml
+          plantuml -tsvg -charset UTF-8 -o "$GITHUB_WORKSPACE/docs/en/assets/plantuml" diagrams/*.puml
+          test -f docs/en/assets/plantuml/c4-system-context.svg
+          test -f docs/en/assets/plantuml/c4-container-view.svg
       - name: Build documentation strictly
         run: mkdocs build --strict
