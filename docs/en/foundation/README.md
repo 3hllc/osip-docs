@@ -5,5 +5,3 @@ Stable documents that establish OSIP's purpose, vision, principles, and governan
 - [Project Charter](project-charter.md) is the governing Phase 0 baseline.
 - [Vision](vision.md) describes the future OSIP intends to create.
 - [Project Principles](project-principles.md) provides decision filters for architecture and product work.
-
-The earlier bootstrap documents are retained in `research/history/bootstrap/` as migration material and are not canonical sources for new changes.
