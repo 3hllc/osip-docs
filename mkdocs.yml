@@ -3,8 +3,6 @@ site_description: Canonical engineering knowledge base for the Open Spatial Inte
 repo_name: OSIP
 docs_dir: docs
 use_directory_urls: true
-hooks:
-  - scripts/mkdocs_hooks.py
 
 theme:
   name: material
@@ -59,7 +57,8 @@ markdown_extensions:
 
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      javascript: assets/javascripts/mermaid.min.js
   - i18n:
       docs_structure: folder
       reconfigure_material: true

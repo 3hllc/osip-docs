@@ -30,14 +30,16 @@ The documentation repository is the canonical source of knowledge. The MkDocs si
 
 ## Local documentation preview
 
-Install the documentation dependencies once, ensure that local PlantUML is available, then run the development server:
+Create the project-local Python environment once, ensure that local PlantUML is available, then run the development server:
 
 ```powershell
-python -m pip install -r requirements-docs.txt
-python -m mkdocs serve
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements-docs.lock
+.\.venv\Scripts\python scripts/render_plantuml.py
+.\.venv\Scripts\python -m mkdocs serve
 ```
 
-Mermaid diagrams render in the browser; PlantUML diagrams are rendered to local SVG during the build. Select either rendered diagram to open the zoomable viewer. For a strict production-equivalent check, run `python -m mkdocs build --strict`.
+Use `.\.venv\Scripts\python` for every local documentation command; do not install documentation dependencies into the global Python environment. Run `scripts/render_plantuml.py` after changing a `.puml` source, then start or refresh MkDocs. Mermaid uses the versioned local bundle in `docs/assets/javascripts/`, so builds and rendered pages do not depend on a CDN. The renderer writes only stale SVG files and runs outside MkDocs, preventing a `mkdocs serve` rebuild loop. Select either rendered diagram to open the zoomable viewer. For a strict production-equivalent check, run `$env:NO_MKDOCS_2_WARNING='true'; .\.venv\Scripts\python -m mkdocs build --strict`.
 
 ## Contributing
 
