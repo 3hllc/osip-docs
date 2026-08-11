@@ -18,7 +18,7 @@ Status values are **Accepted**, **Provisional**, **Superseded**, and **Proposed*
 | D-006 | Maintain a vendor-agnostic domain model and isolate vendor implementations in adapters. | Accepted | ADR-0005 - Vendor-Agnostic Components |
 | D-007 | Use a spatial model and digital twin as durable, contextual platform concepts. | Accepted | ADR-0006 - Spatial Model |
 | D-008 | Keep AI native to the architecture but optional, bounded, and unable to replace safety-critical deterministic control. | Accepted | ADR-0007 - AI Native, Optional |
-| D-009 | Keep English as the canonical technical source while publishing a structurally equivalent Russian site with incremental translations. | Provisional | ADR-0000 - Documentation Strategy and current MkDocs configuration |
+| D-009 | Keep English as the canonical technical source while publishing a structurally equivalent Russian site updated in the same change. | Accepted | ADR-0000 - Documentation Strategy and current MkDocs configuration |
 | D-010 | Model Zigbee Mesh as a physical-device integration layer and MQTT as a separate local event transport. | Accepted | [Zigbee Mesh and MQTT Bridge](../architecture/zigbee-mesh-and-mqtt-bridge.md) |
 
 ## Recording rules

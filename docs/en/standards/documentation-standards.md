@@ -32,7 +32,7 @@ Use PlantUML for C4, deployment, component, infrastructure, and network views. U
 
 ## Language policy
 
-English is the canonical language for platform specifications and ADRs to make the repository broadly usable. Russian translations are welcome for user-facing foundation and installer material, but they must link to the English canonical record, include a translation status/date, and be updated in the same review when their meaning would otherwise diverge.
+English is the canonical language for platform specifications and ADRs to make the repository broadly usable. Every English documentation page has a structurally equivalent Russian translation. Russian pages must link to the English canonical record, include a translation status/date, and be updated in the same change as their English source.
 
 ## Review checklist
 

@@ -1,7 +1,7 @@
 ---
 title: Устав проекта OSIP
 language: ru
-status: translation
+translation_status: current
 owner: OSIP Project
 last_updated: 2026-08-11
 ---
