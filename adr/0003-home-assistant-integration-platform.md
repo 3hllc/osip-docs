@@ -1,12 +1,12 @@
 ---
-title: ADR-0003 — Home Assistant Is an Integration Platform, Not the OSIP Core
+title: ADR-0003 - Home Assistant Is an Integration Platform, Not the OSIP Core
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [integration, vendor-independence, home-assistant]
 ---
 
-# ADR-0003 — Home Assistant Is an Integration Platform, Not the OSIP Core
+# ADR-0003 - Home Assistant Is an Integration Platform, Not the OSIP Core
 
 ## Context
 

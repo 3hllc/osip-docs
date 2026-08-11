@@ -93,7 +93,7 @@ Principles should remain stable.
 
 ---
 
-## Principle 1 — Local First
+## Principle 1 - Local First
 
 Every essential capability of the platform shall operate without Internet connectivity.
 
@@ -108,7 +108,7 @@ Cloud services enhance the system but never become mandatory for core functional
 
 ---
 
-## Principle 2 — Cloud Enhanced
+## Principle 2 - Cloud Enhanced
 
 Cloud services provide additional value:
 
@@ -123,7 +123,7 @@ The cloud complements the platform rather than replacing local intelligence.
 
 ---
 
-## Principle 3 — AI Native
+## Principle 3 - AI Native
 
 Artificial Intelligence is a foundational architectural capability.
 
@@ -141,7 +141,7 @@ AI is not an optional plugin.
 
 ---
 
-## Principle 4 — Spatial Native
+## Principle 4 - Spatial Native
 
 OSIP models physical space explicitly.
 
@@ -160,7 +160,7 @@ Space is a first-class architectural concept.
 
 ---
 
-## Principle 5 — Event Driven
+## Principle 5 - Event Driven
 
 Components communicate primarily through events.
 
@@ -175,7 +175,7 @@ Preferred communication patterns include:
 
 ---
 
-## Principle 6 — Vendor Agnostic
+## Principle 6 - Vendor Agnostic
 
 No hardware manufacturer shall become mandatory.
 
@@ -191,7 +191,7 @@ Examples include:
 
 ---
 
-## Principle 7 — Replaceable Components
+## Principle 7 - Replaceable Components
 
 Every subsystem should be replaceable with minimal architectural impact.
 
@@ -207,7 +207,7 @@ Loose coupling is preferred over direct integration.
 
 ---
 
-## Principle 8 — Open Standards First
+## Principle 8 - Open Standards First
 
 Whenever practical, OSIP should adopt open standards before proprietary protocols.
 
@@ -222,7 +222,7 @@ Examples:
 
 ---
 
-## Principle 9 — Security by Design
+## Principle 9 - Security by Design
 
 Security must be considered from the first architectural decision.
 
@@ -230,7 +230,7 @@ It shall not be treated as a later enhancement.
 
 ---
 
-## Principle 10 — Privacy by Default
+## Principle 10 - Privacy by Default
 
 User data remains local whenever possible.
 
@@ -240,7 +240,7 @@ Users own their data.
 
 ---
 
-## Principle 11 — Documentation First
+## Principle 11 - Documentation First
 
 Architecture is not complete until documented.
 
@@ -248,7 +248,7 @@ Every important engineering decision should result in a permanent project artifa
 
 ---
 
-## Principle 12 — Git as Memory
+## Principle 12 - Git as Memory
 
 Git repositories represent the long-term memory of the project.
 
@@ -256,7 +256,7 @@ Chat conversations are temporary working sessions.
 
 ---
 
-## Principle 13 — API First
+## Principle 13 - API First
 
 Subsystems communicate through well-defined interfaces.
 
@@ -264,7 +264,7 @@ Internal implementations may evolve without breaking integrations.
 
 ---
 
-## Principle 14 — Evolution over Revolution
+## Principle 14 - Evolution over Revolution
 
 The platform evolves through small, incremental improvements.
 
@@ -272,7 +272,7 @@ Large rewrites should be avoided whenever possible.
 
 ---
 
-## Principle 15 — Simplicity over Cleverness
+## Principle 15 - Simplicity over Cleverness
 
 Simple, understandable architecture is preferred over unnecessarily complex solutions.
 
@@ -280,7 +280,7 @@ Future maintainability outweighs short-term optimization.
 
 ---
 
-## Principle 16 — Commercial Sustainability
+## Principle 16 - Commercial Sustainability
 
 Engineering decisions should support long-term commercial viability.
 
@@ -288,7 +288,7 @@ OSIP is intended to become a business, not merely a technical demonstration.
 
 ---
 
-## Principle 17 — Human-Centered Design
+## Principle 17 - Human-Centered Design
 
 Technology exists to improve everyday life.
 
@@ -298,7 +298,7 @@ The best automation is often invisible.
 
 ---
 
-## Principle 18 — Autonomous but Explainable
+## Principle 18 - Autonomous but Explainable
 
 The platform may make autonomous decisions.
 
@@ -312,13 +312,13 @@ Transparency builds trust.
 
 ---
 
-## Principle 19 — Reference Implementation First
+## Principle 19 - Reference Implementation First
 
 Every major capability should first be validated in the reference apartment before becoming part of the commercial platform.
 
 ---
 
-## Principle 20 — Build Platforms, Not Features
+## Principle 20 - Build Platforms, Not Features
 
 OSIP should prioritize reusable platform capabilities over isolated features.
 

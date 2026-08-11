@@ -1,12 +1,12 @@
 ---
-title: ADR-0004 — MQTT as the Initial Event Backbone
+title: ADR-0004 - MQTT as the Initial Event Backbone
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [mqtt, events, edge]
 ---
 
-# ADR-0004 — MQTT as the Initial Event Backbone
+# ADR-0004 - MQTT as the Initial Event Backbone
 
 ## Context
 
@@ -21,7 +21,7 @@ Use MQTT as the initial local message backbone. OSIP defines event and command c
 | Alternative | Reason not selected |
 | --- | --- |
 | Direct HTTP/webhook integrations | Less suitable as a common local device backbone and encourages point-to-point coupling. |
-| Kafka or equivalent streaming platform | Operationally disproportionate for the initial local residential deployment. |
+| Kafka or equivalent streaming platform | Operationally disproportionate for the initial local reference deployment. |
 | No common backbone | Makes cross-vendor automation and observability harder to standardize. |
 
 ## Consequences

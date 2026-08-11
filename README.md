@@ -1,6 +1,6 @@
 # OSIP
 
-OSIP is the **Open Spatial Intelligence Platform**: an open, modular platform for intelligent physical environments. It is not a smart-home distribution and it is not a wrapper around any one integration product. It models spaces, people, devices, events, context, and tasks so that automation, AI, robotics, and engineering systems can work as one coherent environment.
+OSIP is the **Open Spatial Intelligence Platform**: an open, modular platform for intelligent physical environments. It is not a smart-home distribution and it is not a wrapper around any one integration product. It models spaces, people, devices, events, context, and tasks so that automation, AI, robotics, and engineering systems can work as one coherent environment. The first reference deployment is residential; it validates the platform but does not limit its scope to residential use.
 
 ## Getting started
 

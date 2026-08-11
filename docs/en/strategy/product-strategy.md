@@ -23,7 +23,7 @@ For installers, OSIP promises an engineering system rather than an improvised co
 
 ## Product boundaries
 
-The initial product does not attempt to solve every building type, every vendor integration, or autonomous general-purpose robotics. It focuses on a constrained, residential reference design and repeatable local control. Cloud features, advanced AI, and broad vertical expansion are planned only where they preserve local operation and have a specific product hypothesis.
+The initial validation does not attempt to solve every building type, every vendor integration, or autonomous general-purpose robotics. It focuses on a constrained residential reference design and repeatable local control. This constrains the first deployment, not the platform's addressable space types. Cloud features, advanced AI, and each vertical expansion are planned only where they preserve local operation and have a specific product hypothesis.
 
 ## Measures of success
 

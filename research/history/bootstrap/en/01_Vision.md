@@ -7,7 +7,7 @@
 | **Version** | 1.0.0 |
 | **Owner** | OSIP Project |
 | **Language** | English |
-| **Last Updated** | 2026-08-06 |
+| **Last Updated** | 2026-08-11 |
 
 ---
 
@@ -23,7 +23,7 @@ Vision
 
 This document describes the long-term vision of OSIP.
 
-Unlike the Project Charter, which defines governance and architectural direction, the Vision explains **why OSIP exists**, what future it aims to create, and what impact it intends to have on residential technology.
+Unlike the Project Charter, which defines governance and architectural direction, the Vision explains **why OSIP exists**, what future it aims to create, and what impact it intends to have on physical environments.
 
 ---
 
@@ -47,7 +47,7 @@ This vision applies to the entire OSIP ecosystem, including software, hardware, 
 
 # Background
 
-Today's smart homes are collections of disconnected devices and isolated automations.
+Today's connected physical environments are often collections of disconnected devices and isolated automations.
 
 Users configure devices instead of interacting with an intelligent environment.
 
@@ -63,15 +63,15 @@ OSIP aims to change that.
 
 # Vision Statement
 
-OSIP will become the world's leading open platform for residential Spatial Intelligence.
+OSIP will become a leading open platform for Spatial Intelligence across physical environments.
 
-Instead of controlling devices, users will interact with intelligent living spaces capable of understanding people, context, intent, and the physical environment.
+Instead of controlling devices, people and operators will interact with intelligent environments capable of understanding people, context, intent, and physical space.
 
 ---
 
 # Future We Want to Build
 
-Imagine a home that understands:
+Imagine a physical environment that understands:
 
 - who entered,
 - where everyone is,
@@ -83,7 +83,7 @@ Imagine a home that understands:
 - comfort preferences,
 - ongoing activities.
 
-Instead of isolated automations, the entire apartment behaves as a coordinated intelligent system.
+Instead of isolated automations, the environment behaves as a coordinated intelligent system. The first such environment is the reference apartment; it validates the platform but does not limit the environments OSIP can support.
 
 ---
 
@@ -93,7 +93,7 @@ OSIP evolves through five generations.
 
 ## Generation 1
 
-Connected Apartment
+Connected Environment
 
 Devices communicate.
 
@@ -101,7 +101,7 @@ Devices communicate.
 
 ## Generation 2
 
-Context-Aware Apartment
+Context-Aware Environment
 
 The system understands events.
 
@@ -111,13 +111,13 @@ The system understands events.
 
 Spatial Intelligence
 
-The apartment understands physical space.
+The environment understands physical space.
 
 ---
 
 ## Generation 4
 
-Autonomous Home
+Assisted Autonomous Environment
 
 AI plans actions.
 
@@ -129,9 +129,9 @@ Systems optimize themselves.
 
 ## Generation 5
 
-Living Intelligence Platform
+Spatial Intelligence Platform
 
-The apartment becomes an intelligent digital organism capable of continuous learning and adaptation.
+The environment becomes an intelligent, policy-bounded system capable of continuous learning and adaptation.
 
 ---
 
@@ -150,7 +150,7 @@ The apartment becomes an intelligent digital organism capable of continuous lear
 
 # Success Definition
 
-OSIP succeeds when people stop thinking about "smart home" and start experiencing intelligent living spaces.
+OSIP succeeds when people and operators stop managing disconnected devices and start experiencing intelligent physical environments.
 
 ---
 
@@ -165,3 +165,4 @@ Future revisions will include measurable success metrics, adoption milestones, e
 | Version | Date | Description |
 |----------|------------|-------------|
 | 1.0.0 | 2026-08-06 | Initial Vision |
+| 1.1.0 | 2026-08-11 | Clarified physical-environment platform scope; residential is the first validation profile. |

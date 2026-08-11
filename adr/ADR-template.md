@@ -1,12 +1,12 @@
 ---
-title: ADR-0000 — Short decision title
+title: ADR-0000 - Short decision title
 status: proposed
 date: YYYY-MM-DD
 deciders: []
 tags: []
 ---
 
-# ADR-0000 — Short decision title
+# ADR-0000 - Short decision title
 
 ## Context
 

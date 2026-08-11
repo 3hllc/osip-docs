@@ -1,12 +1,12 @@
 ---
-title: ADR-0002 — Event-Driven Architecture
+title: ADR-0002 - Event-Driven Architecture
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [architecture, integration, events]
 ---
 
-# ADR-0002 — Event-Driven Architecture
+# ADR-0002 - Event-Driven Architecture
 
 ## Context
 

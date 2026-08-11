@@ -1,12 +1,12 @@
 ---
-title: ADR-0007 — AI-Native, Runtime-Optional Operation
+title: ADR-0007 - AI-Native, Runtime-Optional Operation
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [ai, privacy, resilience]
 ---
 
-# ADR-0007 — AI-Native, Runtime-Optional Operation
+# ADR-0007 - AI-Native, Runtime-Optional Operation
 
 ## Context
 

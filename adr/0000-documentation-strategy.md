@@ -1,12 +1,12 @@
 ---
-title: ADR-0000 — Documentation Strategy
+title: ADR-0000 - Documentation Strategy
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [documentation, governance, mkdocs]
 ---
 
-# ADR-0000 — Documentation Strategy
+# ADR-0000 - Documentation Strategy
 
 ## Context
 

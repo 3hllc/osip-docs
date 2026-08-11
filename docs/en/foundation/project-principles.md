@@ -44,7 +44,7 @@ Technology exists to improve everyday life, not to make ordinary control opaque.
 
 ## Reference implementation before productization
 
-Every major capability is first validated in the reference apartment before becoming a supported Installer Edition pattern. The goal is reusable platform capability, not an apartment-specific feature. Evidence includes installation effort, acceptance tests, outage and recovery behaviour, lifecycle/support burden, and a documented reason the pattern can be repeated.
+The first platform capabilities are validated in the reference apartment before becoming supported Installer Edition patterns. The goal is reusable platform capability, not an apartment-specific feature. A capability intended for another type of physical environment also requires validation against that environment's domain-specific constraints before it is presented as supported there. Evidence includes installation effort, acceptance tests, outage and recovery behaviour, lifecycle/support burden, and a documented reason the pattern can be repeated.
 
 ## Commercial durability
 

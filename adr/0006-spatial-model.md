@@ -1,12 +1,12 @@
 ---
-title: ADR-0006 — Spatial Model as a Core Domain Capability
+title: ADR-0006 - Spatial Model as a Core Domain Capability
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [spatial, digital-twin, domain]
 ---
 
-# ADR-0006 — Spatial Model as a Core Domain Capability
+# ADR-0006 - Spatial Model as a Core Domain Capability
 
 ## Context
 

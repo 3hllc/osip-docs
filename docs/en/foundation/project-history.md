@@ -4,7 +4,7 @@
 
 OSIP began with the practical question of how to build a resilient, intelligent apartment rather than a collection of disconnected smart-home devices. The initial reference environment is an approximately 165 m² apartment with substantial engineering scope. Early discussions covered Zigbee, HVAC, leak protection, lighting, access, cameras, voice, robots, local compute, and cloud services.
 
-The project deliberately expanded beyond a one-off installation. The apartment is the first laboratory and proof environment; the reusable models, contracts, installation practices, and operational evidence are the product assets.
+The project deliberately expanded beyond a one-off installation. The apartment is the first laboratory and proof environment; the reusable models, contracts, installation practices, and operational evidence are the product assets. OSIP's platform scope extends to physical environments beyond housing; each additional vertical is supported only after its specific safety, privacy, and operational constraints are designed and validated.
 
 ## Founding decisions
 

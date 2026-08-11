@@ -6,7 +6,7 @@ OSIP protects people, their spaces, and their data while allowing maintainable i
 
 ## Trust zones
 
-The reference design separates user devices, trusted platform services, IoT/low-trust devices, management tooling, and Internet-facing services. A zone boundary is enforced with network policy and distinct identities—not only by naming a VLAN. Administrative access enters through a controlled management path; devices do not receive unrestricted access to platform services or the Internet.
+The reference design separates user devices, trusted platform services, IoT/low-trust devices, management tooling, and Internet-facing services. A zone boundary is enforced with network policy and distinct identities - not only by naming a VLAN. Administrative access enters through a controlled management path; devices do not receive unrestricted access to platform services or the Internet.
 
 ## Identities and secrets
 

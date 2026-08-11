@@ -1,6 +1,6 @@
 @startuml c4-system-context
 !include <C4/C4_Context>
-title OSIP — System Context (C4 Level 1)
+title OSIP - System Context (C4 Level 1)
 top to bottom direction
 
 Person(resident, "Resident", "Uses and supervises the intelligent living environment.")

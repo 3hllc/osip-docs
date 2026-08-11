@@ -1,6 +1,6 @@
 @startuml c4-container-view
 !include <C4/C4_Container>
-title OSIP — Local Runtime Containers (C4 Level 2)
+title OSIP - Local Runtime Containers (C4 Level 2)
 top to bottom direction
 
 Person(resident, "Resident")

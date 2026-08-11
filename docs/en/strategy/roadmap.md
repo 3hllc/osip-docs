@@ -17,9 +17,9 @@ flowchart TB
 
 ## Phases and exit criteria
 
-### Phase 0 — Foundation
+### Phase 0 - Foundation
 
-Establish the Charter, principles, documentation workflow, ADR set, architecture overview, core model direction, security baseline, and technology evaluation approach. Exit when the reference-apartment design can make constrained decisions without contradicting the baseline.
+Establish the Charter, principles, documentation workflow, ADR set, architecture overview, core model direction, security baseline, and technology evaluation approach. Exit when the initial reference-deployment design, currently the Reference Apartment, can make constrained decisions without contradicting the baseline.
 
 ### Reference Apartment
 

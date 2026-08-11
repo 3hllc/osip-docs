@@ -8,7 +8,7 @@
 | **Owner** | OSIP Project |
 | **Authors** | OSIP Founders |
 | **Language** | English |
-| **Last Updated** | 2026-08-06 |
+| **Last Updated** | 2026-08-11 |
 | **Repository** | OSIP Bootstrap Repository |
 
 ---
@@ -38,7 +38,7 @@ This charter governs every aspect of the OSIP ecosystem, including but not limit
 - Platform architecture
 - Software engineering
 - Embedded systems
-- Smart home integration
+- Physical-environment integration, including smart-home integration
 - AI systems
 - Robotics
 - Spatial Intelligence
@@ -80,7 +80,7 @@ This document is intended for:
 
 OSIP originated from the idea of designing a highly intelligent residential apartment capable of autonomous operation, advanced automation, AI-assisted decision making, and seamless interaction between people, devices, and robots.
 
-During the architectural exploration, the project evolved beyond a single smart apartment into a general-purpose **Spatial Intelligence Platform** intended for residential environments.
+During the architectural exploration, the project evolved beyond a single smart apartment into a general-purpose **Spatial Intelligence Platform** for physical environments. Residential space remains the first validation profile, not the platform boundary.
 
 Rather than building another smart home controller, OSIP aims to become an open platform capable of integrating heterogeneous devices, services, AI models, and robotic systems into one coherent ecosystem.
 
@@ -90,7 +90,7 @@ The first implementation will be a reference apartment of approximately **165 mÂ
 
 # Vision
 
-OSIP will become an open, vendor-agnostic platform that enables residential environments to understand:
+OSIP will become an open, vendor-agnostic platform that enables physical environments to understand:
 
 - space,
 - people,
@@ -106,7 +106,7 @@ Instead of merely automating devices, OSIP will provide **Spatial Intelligence**
 
 # Mission
 
-To build the world's most open, extensible, privacy-preserving, AI-native Spatial Intelligence Platform for residential environments.
+To build the world's most open, extensible, privacy-preserving, AI-native Spatial Intelligence Platform for physical environments.
 
 ---
 
@@ -164,7 +164,7 @@ Cloud services provide:
 - fleet management;
 - analytics.
 
-Loss of Internet connectivity must never disable the apartment.
+Loss of Internet connectivity must never disable critical local operation in a supported deployment.
 
 ---
 
@@ -430,3 +430,4 @@ Future revisions of this document will include:
 | 0.1 | 2026-08-06 | Initial outline |
 | 0.5 | 2026-08-06 | Expanded architecture and principles |
 | 1.0.0 | 2026-08-06 | First official Project Charter |
+| 1.1.0 | 2026-08-11 | Clarified physical-environment platform scope; residential is the first validation profile. |

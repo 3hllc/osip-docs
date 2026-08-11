@@ -1,12 +1,12 @@
 ---
-title: ADR-0005 — Vendor-Agnostic Replaceable Components
+title: ADR-0005 - Vendor-Agnostic Replaceable Components
 status: accepted
 date: 2026-08-07
 deciders: [OSIP Project]
 tags: [vendor-independence, architecture]
 ---
 
-# ADR-0005 — Vendor-Agnostic Replaceable Components
+# ADR-0005 - Vendor-Agnostic Replaceable Components
 
 ## Context
 
