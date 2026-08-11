@@ -10,11 +10,11 @@ The reference architecture is local-first: the edge environment owns critical de
 
 The C4 source remains versioned in `diagrams/c4-system-context.puml` at the repository root; MkDocs generates the following SVG during every build. It deliberately represents Home Assistant, MQTT, Zigbee2MQTT, and cloud/model providers as replaceable external systems rather than OSIP's core.
 
-![OSIP C4 system context](../assets/plantuml/c4-system-context.svg)
+![OSIP C4 system context](../../assets/plantuml/c4-system-context.svg)
 
 The companion C4 container view is generated from `diagrams/c4-container-view.puml`.
 
-![OSIP C4 container view](../assets/plantuml/c4-container-view.svg)
+![OSIP C4 container view](../../assets/plantuml/c4-container-view.svg)
 
 ## Logical layers
 

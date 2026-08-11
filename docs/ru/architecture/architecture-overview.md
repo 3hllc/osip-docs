@@ -16,11 +16,11 @@ OSIP — набор независимо заменяемых возможнос
 
 Исходник C4 хранится в корневом каталоге репозитория `diagrams/c4-system-context.puml`; MkDocs создаёт следующий SVG при каждой сборке. В нём Home Assistant, MQTT, Zigbee2MQTT и облачные/модельные провайдеры намеренно показаны как заменяемые внешние системы, а не ядро OSIP.
 
-![Контекст системы OSIP C4](../assets/plantuml/c4-system-context.svg)
+![Контекст системы OSIP C4](../../assets/plantuml/c4-system-context.svg)
 
 Сопутствующий контейнерный вид C4 генерируется из `diagrams/c4-container-view.puml`.
 
-![Контейнерный вид OSIP C4](../assets/plantuml/c4-container-view.svg)
+![Контейнерный вид OSIP C4](../../assets/plantuml/c4-container-view.svg)
 
 ## Логические слои
 

@@ -15,7 +15,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = PROJECT_ROOT / "diagrams"
-OUTPUT_DIR = PROJECT_ROOT / "docs" / "en" / "assets" / "plantuml"
+OUTPUT_DIR = PROJECT_ROOT / "docs" / "assets" / "plantuml"
 
 
 def renderer() -> list[str]:
