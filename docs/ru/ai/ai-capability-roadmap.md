@@ -27,4 +27,4 @@ translation_status: current
 
 - [Архитектура ИИ](ai-architecture.md)
 - [Цифровой двойник](../architecture/digital-twin.md)
-- [ADR-0007 - AI-Native, Runtime-Optional Operation](https://github.com/3hllc/osip-docs/blob/main/adr/0007-ai-native-optional.md)
+- ADR-0007 — ИИ-нативная архитектура с необязательным использованием во время выполнения
