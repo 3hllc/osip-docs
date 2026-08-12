@@ -6,63 +6,45 @@ This view explains how OSIP operates a physical space end to end. It complements
 
 ```mermaid
 flowchart TB
-  subgraph PHYSICAL[Physical environment]
-    DEV[Devices, engineering systems and manual controls]
-    PROTO[Zigbee, BACnet, KNX, Modbus, vendor APIs and other protocols]
-    DEV <--> PROTO
-  end
-
-  subgraph INTEGRATION[Replaceable integration boundary]
-    Z2M[Zigbee2MQTT or another protocol bridge]
-    HA[Home Assistant]
-    PROVIDERS[Integration providers\nHomeAssistantProvider and direct providers]
-    RAW[Raw telemetry and diagnostics\nprovenance-controlled]
-    Z2M --> PROVIDERS
-    HA --> PROVIDERS
-    PROVIDERS --> RAW
+  subgraph INPUTS[People, applications and optional assistance]
+    direction TB
+    REQUEST[Human decision and manual override\ntyped intents, queries and approved configuration requests]
+    ENHANCEMENT[AI capabilities and OSIP Fleet / Control Plane\noptional interpretation, recommendations, configuration, rollout and audit]
   end
 
   subgraph EDGE[OSIP Edge Runtime — local-first critical path]
-    BUS[Canonical OSIP Bus\nversioned events and routed commands]
-    TWIN[Digital Twin\nsite, spaces, assets, capabilities, bindings and context]
-    POLICY[Policy Engine\nauthorization, safety, privacy, energy and approval]
-    CSRL[Constrained Spatial Reasoning Layer\ninterprets spatial context and creates an explainable decision]
+    direction TB
+    CONTEXT[Digital Twin, asset registry and policy\nspatial context, capabilities, bindings, authority, safety, privacy and energy constraints]
+    CSRL[Constrained Spatial Reasoning Layer\ncreates an explainable permitted decision]
     PLAN[Attributable Execution Plan\nselected bindings, constraints, verification and fallback]
-    EXEC[Deterministic Execution\nlocal rules, approved plans, verification and safe degradation]
+    EXEC[Deterministic Execution\nlocal rules, approved plans and safe degradation]
+    BUS[Canonical OSIP Bus\nversioned event and routed-command exchange]
     STATE[(Local state, configuration and audit)]
 
-    BUS --> TWIN
-    TWIN --> CSRL
-    POLICY --> CSRL
-    CSRL -->|recommend / reject / request approval| EXPLAIN[Explanation for a person or application]
-    CSRL -->|permitted| PLAN --> EXEC --> BUS
-    TWIN <--> STATE
-    POLICY <--> STATE
-    CSRL <--> STATE
-    EXEC --> STATE
+    CONTEXT --> CSRL --> PLAN --> EXEC --> BUS --> STATE
   end
 
-  subgraph EXPERIENCE[Applications and people]
-    APP[Operator, tenant, installer and vertical applications]
-    HUMAN[Human decision and manual override]
-    APP -->|typed intent, query or approved configuration request| CSRL
-    EXPLAIN --> APP
-    HUMAN --> APP
+  subgraph INTEGRATION[Replaceable integration boundary]
+    direction TB
+    PROVIDERS[Integration providers\nHomeAssistantProvider and direct providers]
+    PATHS[Zigbee2MQTT, Home Assistant, protocol bridges\nand direct provider paths]
+    RAW[Raw telemetry and diagnostics\nretained with provenance]
+    PROVIDERS --> PATHS
+    PROVIDERS -. diagnostics .-> RAW
   end
 
-  subgraph OPTIONAL[Optional, non-critical services]
-    CONTROL[OSIP Fleet / Control Plane\ncommissioning, configuration, rollout, health and audit]
-    AI[AI capabilities\nintent interpretation, recommendation and anomaly detection]
-    CONTROL -. versioned configuration and evidence sync .-> STATE
-    AI -. proposed intent or interpretation only .-> CSRL
+  subgraph PHYSICAL[Physical environment]
+    direction TB
+    PROTO[Zigbee, BACnet, KNX, Modbus, vendor APIs and other protocols]
+    DEV[Devices, engineering systems and manual controls]
+    PROTO --> DEV
   end
 
-  PROTO --> Z2M
-  PROTO --> HA
-  PROTO --> PROVIDERS
-  PROVIDERS -->|canonical observations, state, health| BUS
-  BUS -->|authorized canonical commands| PROVIDERS
-  PROVIDERS --> PROTO
+  REQUEST -->|policy-scoped intent or decision| CONTEXT
+  ENHANCEMENT -. proposed interpretation, recommendation or versioned configuration .-> CONTEXT
+  BUS -->|canonical exchange| PROVIDERS
+  STATE ~~~ PROVIDERS
+  PATHS --> PROTO
 ```
 
 ## Reading the diagram

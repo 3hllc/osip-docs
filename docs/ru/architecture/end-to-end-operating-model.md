@@ -12,63 +12,45 @@ source_language: en
 
 ```mermaid
 flowchart TB
-  subgraph PHYSICAL[Физическая среда]
-    DEV[Устройства, инженерные системы и ручные органы управления]
-    PROTO[Zigbee, BACnet, KNX, Modbus, API производителей и другие протоколы]
-    DEV <--> PROTO
-  end
-
-  subgraph INTEGRATION[Заменяемая граница интеграций]
-    Z2M[Zigbee2MQTT или другой мост протокола]
-    HA[Home Assistant]
-    PROVIDERS[Провайдеры интеграций\nHomeAssistantProvider и прямые провайдеры]
-    RAW[Исходная телеметрия и диагностика\nс контролем происхождения]
-    Z2M --> PROVIDERS
-    HA --> PROVIDERS
-    PROVIDERS --> RAW
+  subgraph INPUTS[Люди, приложения и необязательная помощь]
+    direction TB
+    REQUEST[Решение человека и ручной override\nтипизированные намерения, запросы и одобренные изменения конфигурации]
+    ENHANCEMENT[Возможности AI и парк OSIP / control plane\nнеобязательные интерпретация, рекомендации, конфигурация, rollout и аудит]
   end
 
   subgraph EDGE[OSIP Edge Runtime — локальный критический путь]
-    BUS[Каноническая шина OSIP\nверсионированные события и маршрутизированные команды]
-    TWIN[Цифровой двойник\nобъекты, пространства, активы, возможности, привязки и контекст]
-    POLICY[Движок политик\nавторизация, безопасность, конфиденциальность, энергия и одобрение]
-    CSRL[Constrained Spatial Reasoning Layer\nинтерпретирует пространственный контекст и создаёт объяснимое решение]
+    direction TB
+    CONTEXT[Цифровой двойник, реестр активов и политики\nпространственный контекст, возможности, привязки, полномочия, безопасность, конфиденциальность и энергетические ограничения]
+    CSRL[Constrained Spatial Reasoning Layer\nсоздаёт объяснимое разрешённое решение]
     PLAN[Атрибутируемый план исполнения\nвыбранные привязки, ограничения, проверка и резервный путь]
-    EXEC[Детерминированное исполнение\nлокальные правила, принятые планы, проверка и безопасная деградация]
+    EXEC[Детерминированное исполнение\nлокальные правила, принятые планы и безопасная деградация]
+    BUS[Каноническая шина OSIP\nобмен версионированными событиями и маршрутизированными командами]
     STATE[(Локальное состояние, конфигурация и аудит)]
 
-    BUS --> TWIN
-    TWIN --> CSRL
-    POLICY --> CSRL
-    CSRL -->|рекомендация / отказ / запрос одобрения| EXPLAIN[Объяснение для человека или приложения]
-    CSRL -->|разрешено| PLAN --> EXEC --> BUS
-    TWIN <--> STATE
-    POLICY <--> STATE
-    CSRL <--> STATE
-    EXEC --> STATE
+    CONTEXT --> CSRL --> PLAN --> EXEC --> BUS --> STATE
   end
 
-  subgraph EXPERIENCE[Приложения и люди]
-    APP[Приложения оператора, арендатора, инсталлятора и vertical solutions]
-    HUMAN[Решение человека и ручной override]
-    APP -->|типизированное намерение, запрос или одобренное изменение конфигурации| CSRL
-    EXPLAIN --> APP
-    HUMAN --> APP
+  subgraph INTEGRATION[Заменяемая граница интеграций]
+    direction TB
+    PROVIDERS[Провайдеры интеграций\nHomeAssistantProvider и прямые провайдеры]
+    PATHS[Zigbee2MQTT, Home Assistant, мосты протоколов\nи прямые пути провайдеров]
+    RAW[Исходная телеметрия и диагностика\nс сохранением происхождения]
+    PROVIDERS --> PATHS
+    PROVIDERS -. диагностика .-> RAW
   end
 
-  subgraph OPTIONAL[Необязательные, некритичные сервисы]
-    CONTROL[Парк OSIP / control plane\ncommissioning, конфигурация, rollout, health и audit]
-    AI[Возможности AI\nинтерпретация намерений, рекомендации и обнаружение аномалий]
-    CONTROL -. синхронизация версионированной конфигурации и evidence .-> STATE
-    AI -. только предложенное намерение или интерпретация .-> CSRL
+  subgraph PHYSICAL[Физическая среда]
+    direction TB
+    PROTO[Zigbee, BACnet, KNX, Modbus, API производителей и другие протоколы]
+    DEV[Устройства, инженерные системы и ручные органы управления]
+    PROTO --> DEV
   end
 
-  PROTO --> Z2M
-  PROTO --> HA
-  PROTO --> PROVIDERS
-  PROVIDERS -->|канонические observations, состояние и health| BUS
-  BUS -->|авторизованные канонические команды| PROVIDERS
-  PROVIDERS --> PROTO
+  REQUEST -->|намерение или решение в области действия политик| CONTEXT
+  ENHANCEMENT -. предложенная интерпретация, рекомендация или версионированная конфигурация .-> CONTEXT
+  BUS -->|канонический обмен| PROVIDERS
+  STATE ~~~ PROVIDERS
+  PATHS --> PROTO
 ```
 
 ## Как читать диаграмму
