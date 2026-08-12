@@ -14,12 +14,18 @@ Status values are **Accepted**, **Provisional**, **Superseded**, and **Proposed*
 | D-002 | Required control operates locally; cloud services enhance rather than replace the normal local path. | Accepted | ADR-0001 - Local First |
 | D-003 | Use event-driven interaction with explicit contracts between components. | Accepted | ADR-0002 - Event-Driven Architecture |
 | D-004 | Treat Home Assistant as an initial integration platform, not as the OSIP domain core. | Accepted | ADR-0003 - Home Assistant Integration Platform |
-| D-005 | Use MQTT as the initial local event backbone, behind adapter and contract boundaries. | Accepted | ADR-0004 - MQTT Event Backbone |
+| D-005 | Use MQTT as the initial local event backbone, behind adapter and contract boundaries. | Superseded | ADR-0004, superseded by ADR-0009 |
 | D-006 | Maintain a vendor-agnostic domain model and isolate vendor implementations in adapters. | Accepted | ADR-0005 - Vendor-Agnostic Components |
 | D-007 | Use a spatial model and digital twin as durable, contextual platform concepts. | Accepted | ADR-0006 - Spatial Model |
 | D-008 | Keep AI native to the architecture but optional, bounded, and unable to replace safety-critical deterministic control. | Accepted | ADR-0007 - AI Native, Optional |
 | D-009 | Keep English as the canonical technical source while publishing a structurally equivalent Russian site updated in the same change. | Accepted | ADR-0000 - Documentation Strategy and current MkDocs configuration |
 | D-010 | Model Zigbee Mesh as a physical-device integration layer and MQTT as a separate local event transport. | Accepted | [Zigbee Mesh and MQTT Bridge](../architecture/zigbee-mesh-and-mqtt-bridge.md) |
+| D-011 | Use Integration Providers and a canonical semantic boundary; treat Home Assistant as a first-class provider, not a mandatory OSIP foundation. | Accepted | ADR-0008 |
+| D-012 | Define the OSIP bus semantically and defer permanent transport selection; MQTT remains an allowed MVP/edge transport. | Accepted | ADR-0009 |
+| D-013 | Keep physical asset identity and capabilities independent from provider identities and protocols. | Accepted | ADR-0010 |
+| D-014 | Use a site-local edge runtime for declared critical local execution. | Accepted | ADR-0011 |
+| D-015 | Separate intent, policy, and deterministic execution through attributable execution plans. | Accepted | ADR-0012 |
+| D-016 | Name OSIP's decision-making capability the Constrained Spatial Reasoning Layer; keep deterministic automation subordinate to approved execution and narrow technical rules. | Accepted | ADR-0013 |
 
 ## Recording rules
 

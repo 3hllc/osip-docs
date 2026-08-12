@@ -1,5 +1,6 @@
 ---
 translation_status: current
+source_language: en
 ---
 
 # Дорожная карта возможностей ИИ

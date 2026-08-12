@@ -8,24 +8,27 @@ The digital twin is OSIP's structured representation of the installation and its
 
 | Layer | Examples | Authority and change method |
 | --- | --- | --- |
-| Physical baseline | Building, floor, room boundaries, doors, fixed engineering assets, coordinate reference. | Curated during design/commissioning; changes are reviewed configuration changes. |
+| Physical baseline | Site, building, floor, room boundaries, doors, fixed engineering assets, coordinate reference. | Curated during design/commissioning; changes are reviewed configuration changes. |
 | Semantic model | Room purposes, zones, named objects, accessibility, safety areas. | Owned by the installation and versioned as configuration. |
-| Asset linkage | Device-to-location, actuator-to-object, sensor field of view, robot docks. | Commissioning record with identity and verification evidence. |
+| Asset linkage | Asset-to-location, actuator-to-object, sensor field of view, provider bindings, robot docks. | Commissioning record with identity and verification evidence. |
 | Live state | Temperature, position, occupancy evidence, door status, robot mission state. | Observed from adapters; timestamped and source-attributed. |
 | Derived context | “reading zone active”, inferred occupancy, recommended task. | Derived, confidence- and freshness-qualified; never overwrites physical facts. |
 
 ## Identity and relationships
 
-Every twin entity has a stable OSIP identity, type, owning installation, lifecycle state, and provenance. Vendor identifiers remain adapter attributes. Relationships are typed and directional where useful: `contains`, `adjacent-to`, `located-in`, `covers`, `controls`, `observes`, `serves`, and `reachable-from`.
+Every twin entity has a stable OSIP identity, type, owning site, lifecycle state, and provenance. Vendor identifiers remain provider-binding attributes. Relationships are typed and directional where useful: `contains`, `adjacent-to`, `located-in`, `covers`, `controls`, `observes`, `serves`, `connects`, `belongs-to`, and `reachable-from`.
 
 ```mermaid
 erDiagram
-  INSTALLATION ||--o{ SPACE : contains
+  SITE ||--o{ BUILDING : contains
+  BUILDING ||--o{ FLOOR : contains
+  FLOOR ||--o{ SPACE : contains
   SPACE ||--o{ ZONE : partitions
   SPACE ||--o{ OBJECT : contains
-  OBJECT ||--o{ DEVICE : is_controlled_by
-  ZONE ||--o{ DEVICE : is_observed_by
-  DEVICE ||--o{ CAPABILITY : exposes
+  OBJECT ||--o{ ASSET : is_controlled_by
+  ZONE ||--o{ ASSET : is_observed_by
+  ASSET ||--o{ CAPABILITY : exposes
+  ASSET ||--o{ BINDING : has
   SPACE ||--o{ ROBOT_ROUTE : permits
 ```
 

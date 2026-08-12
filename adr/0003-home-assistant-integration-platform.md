@@ -30,5 +30,5 @@ Adapter work and model translation are intentional costs. The result is a credib
 
 ## Links
 
-- [Architecture Overview](../docs/architecture/architecture-overview.md)
+- [Architecture Overview](../docs/en/architecture/architecture-overview.md)
 - [ADR-0005 Vendor Agnostic Components](0005-vendor-agnostic-components.md)

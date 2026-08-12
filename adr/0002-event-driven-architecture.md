@@ -30,5 +30,5 @@ Consumers must be idempotent and tolerate duplicates, reordering, and delayed de
 
 ## Links
 
-- [Event Model](../docs/architecture/event-model.md)
+- [Event Model](../docs/en/architecture/event-model.md)
 - [ADR-0004 MQTT Event Backbone](0004-mqtt-event-backbone.md)

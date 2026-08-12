@@ -84,12 +84,19 @@ plugins:
             Roadmap: Дорожная карта
             Architecture: Архитектура
             Architecture Overview: Обзор архитектуры
+            End-to-End Operating Model: Сквозная операционная модель
+            Physical Asset Model: Модель физических активов
             Context Model: Модель контекста
             Domain Model: Доменная модель
             Event Model: Модель событий
             Device Model: Модель устройств
             Digital Twin: Цифровой двойник
             Message Bus: Шина сообщений
+            Integration Providers: Провайдеры интеграций
+            Constrained Spatial Reasoning Layer: Слой ограниченного пространственного рассуждения
+            Intent, Policy, and Execution: Намерения, политики и исполнение
+            Edge Runtime: Edge Runtime
+            Fleet and Control Plane: Парк и control plane
             Zigbee Mesh and MQTT Bridge: Zigbee Mesh и MQTT-мост
             API Architecture: Архитектура API
             Security Architecture: Архитектура безопасности
@@ -102,6 +109,7 @@ plugins:
             AI: ИИ
             AI Architecture: Архитектура ИИ
             AI Capability Roadmap: Дорожная карта возможностей ИИ
+            AI Model Deployment Strategy: Стратегия развёртывания моделей ИИ
             Product: Продукт
             Commercial and Installer Edition Strategy: Коммерческая стратегия и Installer Edition
             Reference Designs: Референсные проекты
@@ -138,12 +146,19 @@ nav:
   - Architecture:
       - Overview: architecture/README.md
       - Architecture Overview: architecture/architecture-overview.md
+      - End-to-End Operating Model: architecture/end-to-end-operating-model.md
+      - Physical Asset Model: architecture/physical-asset-model.md
       - Context Model: architecture/context-model.md
       - Domain Model: architecture/domain-model.md
       - Event Model: architecture/event-model.md
       - Device Model: architecture/device-model.md
       - Digital Twin: architecture/digital-twin.md
       - Message Bus: architecture/message-bus.md
+      - Integration Providers: architecture/integration-providers.md
+      - Constrained Spatial Reasoning Layer: architecture/constrained-spatial-reasoning-layer.md
+      - Intent, Policy, and Execution: architecture/intent-policy-and-execution.md
+      - Edge Runtime: architecture/edge-runtime.md
+      - Fleet and Control Plane: architecture/fleet-control-plane.md
       - Zigbee Mesh and MQTT Bridge: architecture/zigbee-mesh-and-mqtt-bridge.md
       - API Architecture: architecture/api-architecture.md
       - Security Architecture: architecture/security-architecture.md
@@ -158,6 +173,7 @@ nav:
       - Overview: ai/README.md
       - AI Architecture: ai/ai-architecture.md
       - AI Capability Roadmap: ai/ai-capability-roadmap.md
+      - AI Model Deployment Strategy: ai/ai-model-deployment-strategy.md
   - Product:
       - Overview: product/README.md
       - Commercial and Installer Edition Strategy: product/commercial-strategy.md

@@ -2,7 +2,7 @@
 
 ## Interface types
 
-OSIP uses different contracts for different interaction needs: events for asynchronous facts, commands for requested changes, queries for current or historical projections, configuration interfaces for reviewed durable changes, and human/installer interfaces for controlled operations. A UI is a client of these boundaries, not a privileged alternate API.
+OSIP uses different contracts for different interaction needs: events for asynchronous facts, commands for specific capability actions, intents for desired operational outcomes, queries for current or historical projections, configuration interfaces for reviewed durable changes, and human/installer interfaces for controlled operations. An intent is resolved into a policy-compliant execution plan; it is not an unbounded command or permission bypass. A UI is a client of these boundaries, not a privileged alternate API.
 
 ## Contract ownership and versioning
 

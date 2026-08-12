@@ -17,7 +17,7 @@ The Charter does not prescribe a vendor, a final product implementation, or a co
 
 Build an open platform that transforms physical spaces into intelligent environments. OSIP brings together engineering systems, IoT devices, automation, robotics, AI, and a digital representation of space while retaining reliable local operation and meaningful human control. The first validation profile is residential, but OSIP's platform model is designed to be applicable to apartments, houses, offices, retail, warehouses and logistics, hospitality, healthcare, campuses, industrial environments, and other spaces once their domain-specific requirements are explicitly designed.
 
-OSIP is not another collection of device dashboards, a Home Assistant distribution, or a cloud service tied to one building type. It is a platform that can reason about the relationship between people, places, objects, events, context, and tasks. External products contribute capabilities; OSIP owns the architectural model and integration boundaries.
+OSIP is not another collection of device dashboards, a Home Assistant distribution, or a cloud service tied to one building type. It is a platform that can reason about the relationship between people, places, assets, events, context, and tasks. OSIP owns stable physical identity, the spatial/capability model, policy-scoped intents, and the canonical boundary; external products contribute replaceable provider bindings and execution paths.
 
 ## Product and business direction
 

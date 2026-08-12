@@ -2,7 +2,7 @@
 
 ## Decision boundary
 
-The message bus provides durable, observable transport for events and routed commands. MQTT is the preferred initial backbone because it works well on constrained local networks and has a mature device ecosystem. MQTT is not the platform: contracts, authorization, adapters, and observability must make later transport evolution possible.
+The OSIP bus provides durable, observable transport for canonical events and routed commands. It is a semantic boundary, not a commitment that every device or provider uses one transport. MQTT is a valid initial local transport and an important integration technology, but the selected bus implementation must follow the required delivery, ordering, replay, durability, request/response, and operational semantics. Domain contracts do not expose MQTT topics or client libraries.
 
 ## Responsibilities
 
@@ -16,6 +16,6 @@ Separate clients and credentials are required for adapters, core services, admin
 
 ## Resilience and migration
 
-The broker runs on the local trusted environment and is monitored for availability, connection churn, rejected authorization, queued messages, and retained-state size. Clients reconnect safely, treat duplicates as normal, and do not assume retained data is current without its timestamp and source health.
+The selected local transport runs in the trusted environment and is monitored for availability, connection churn, rejected authorization, queues, lag, and persisted-state size as applicable. Clients reconnect safely, treat duplicates as normal, and do not assume a cached or retained value is current without its timestamp and provider health.
 
-Bus-facing interfaces are specified independent of MQTT client libraries. An adapter layer is responsible for translating OSIP event and command contracts into MQTT topics and QoS choices. This preserves the option to introduce bridges or replace transport without changing the core domain.
+Bus-facing interfaces are specified independently of transport libraries. A transport adapter translates OSIP event and command contracts into MQTT topics and QoS choices, NATS subjects, or another selected mechanism. This preserves the option to introduce bridges or replace transport without changing the core domain.

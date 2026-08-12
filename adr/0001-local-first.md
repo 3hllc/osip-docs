@@ -30,5 +30,5 @@ Local deployments need compute, storage, update, backup, observability, and reco
 
 ## Links
 
-- [Project Charter](../docs/foundation/project-charter.md)
-- [Architecture Overview](../docs/architecture/architecture-overview.md)
+- [Project Charter](../docs/en/foundation/project-charter.md)
+- [Architecture Overview](../docs/en/architecture/architecture-overview.md)

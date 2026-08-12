@@ -6,7 +6,7 @@ Events are immutable statements that something was observed, changed, requested,
 
 ## Contract
 
-Each event envelope must carry a stable event name and version, unique event identifier, occurrence timestamp, producer identity, correlation identifier when it belongs to a workflow, subject identity, schema reference, and data classification. Payloads contain the minimum data required by consumers; sensitive information is not placed in a broad topic merely for convenience.
+Each event envelope must carry a stable event name and version, unique event identifier, occurrence timestamp, producer identity, correlation identifier when it belongs to a workflow, subject identity, site scope, schema reference, provenance reference, and data classification. Payloads contain the minimum data required by consumers; sensitive information is not placed in a broad topic merely for convenience.
 
 Suggested names use the form `osip.<domain>.<fact>.v<major>`, for example `osip.device.state-changed.v1` or `osip.space.occupancy-inferred.v1`. The topic or routing key is transport configuration; the event name is the domain contract.
 
@@ -24,4 +24,4 @@ Events have owners, retention expectations, access policies, and redaction requi
 
 ## Boundaries
 
-Raw protocol events are adapter inputs. The adapter normalises them into OSIP contracts only after validating identity, timestamp, units, and capability semantics. Consumers that need vendor diagnostics consume them through a bounded adapter diagnostic interface, not through core domain events.
+Raw protocol events are provider inputs. A provider normalises them into OSIP contracts only after validating asset binding, timestamp, units, and capability semantics. Raw payloads remain available through a bounded diagnostics/reprocessing interface with provenance and access controls; they never become a general core-domain API.

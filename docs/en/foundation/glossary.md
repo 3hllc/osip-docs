@@ -23,11 +23,17 @@ This glossary establishes the preferred meanings of terms used across OSIP speci
 | --- | --- |
 | **Spatial model** | The durable representation of spaces, zones, objects, relationships, and contextual meaning in an environment. |
 | **Digital twin** | A time-aware, attributable projection of relevant physical and contextual state. It is not a complete copy of every vendor payload or a substitute for source-of-truth systems. |
-| **Device** | A physical or logical endpoint represented by a stable OSIP `device_id`. Its radio, vendor, and integration identifiers are attributes, not the durable domain identity. |
+| **Site** | The top-level physical and operational scope for an OSIP deployment, such as a residence, office, hotel, campus, or industrial location. |
+| **Asset** | A physical or virtual entity represented by a stable OSIP `asset_id`: for example a sensor, HVAC unit, door, lighting circuit, camera, or logical engineering asset. Its external identifiers are bindings, not its durable identity. |
+| **Device** | A field endpoint or controller represented as an OSIP asset. Its radio, vendor, and integration identifiers are attributes, not the durable domain identity. |
 | **Capability** | A normalized function that a device or service can expose, such as occupancy sensing, dimming, contact state, or temperature measurement. |
+| **Provider** | A bounded integration component that maps an external product, protocol, or API into OSIP assets, capabilities, canonical events, and commands. Home Assistant is one potential provider. |
+| **Binding** | An explicit association between an OSIP asset and an external provider identity, including its control role, health, provenance, and lifecycle. |
 | **Observation** | A fact reported by a source at a time, for example a measured temperature or button press. Observations can be late, duplicated, invalid, or stale. |
 | **State projection** | The current interpretation derived from observations and commands. It carries source, timestamp, and quality; it must not claim freshness that the platform cannot establish. |
 | **Command** | A requested, attributable action. Broker acceptance is not command completion; completion is evidenced by an observed result or documented acknowledgement. |
+| **Intent** | A requested outcome for a space or asset, such as maintaining comfort during a meeting. It is resolved into a policy-compliant execution plan rather than directly controlling named devices. |
+| **Execution plan** | The attributable, policy-approved selection of eligible assets, capabilities, provider bindings, commands, fallbacks, and verification needed to fulfil an intent. |
 | **Event** | An immutable record that something happened or changed. Events use versioned contracts and have an owner, time, source, and classification. |
 | **Context** | Meaning derived from spatial, temporal, behavioural, and system facts, such as “activity in the kitchen zone after sunset.” |
 

@@ -8,7 +8,7 @@ Constraints are non-negotiable or presently binding conditions that shape the so
 
 | ID | Constraint | Source or rationale | Architectural effect |
 | --- | --- | --- | --- |
-| C-001 | Essential automation and device control must continue on the trusted local environment during WAN loss. | Local First project principle. | Core identities, control paths, broker, integration adapters, and required state cannot depend solely on cloud services. |
+| C-001 | Essential automation and device control must continue on the trusted local environment during WAN loss. | Local First project principle. | Core identities, control paths, selected local transport, integration providers, required state, policy, and deterministic execution cannot depend solely on cloud services. |
 | C-002 | Cloud capabilities are additive and explicitly classified. | Cloud Enhanced project principle. | Remote access, backup, analytics, and AI may use cloud services only with a defined degraded local mode and privacy boundary. |
 | C-003 | Domain contracts must remain independent of vendors and individual adapter topic formats. | Vendor Agnostic project principle. | Integrations pass through adapters; vendor payloads cannot become the general API or spatial model. |
 | C-004 | Documentation is versioned, reviewable source in Git and the published site is generated from it. | Docs as Code decision and ADR-0000. | Markdown, text diagrams, ADRs, and validation steps are part of delivery; edits to generated site output are not authoritative. |

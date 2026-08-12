@@ -2,7 +2,7 @@
 
 ## Strategic intent
 
-OSIP creates a commercial platform for spatial intelligence that can be applied to any physical environment. The business is not a one-off smart-home installation practice: every validated installation pattern should become a reusable product, service, integration, or operational capability. Residential space is the first validation profile, not the platform boundary.
+OSIP creates a commercial operational control plane for physical spaces. It is neither a one-off smart-home installation practice nor a replacement for a smart-home hub. Every validated installation pattern should become a reusable product, service, integration provider, or operational capability. Residential space is the first validation profile, not the platform boundary.
 
 The reference apartment validates hypotheses under real conditions. Its value is the evidence and reusable design it produces, not the uniqueness of its equipment list.
 
@@ -13,7 +13,7 @@ The reference apartment validates hypotheses under real conditions. Its value is
 | Reference Apartment | Founders and engineering team | A real environment for validating architecture, reliability, privacy, and installation methods. | Documented topology, acceptance tests, incident lessons, and repeatable design decisions. |
 | Installer Edition | Qualified installer | A repeatable path to commission and service a local-first OSIP deployment. | Installation playbook, supported device profiles, provisioning controls, diagnostics, and rollback/recovery procedures. |
 | Commercial Installation | Customer, installer, operator | A reliable, supportable spatially-aware installation with a clear scope. | Product boundary, acceptance criteria, support model, and measured deployment outcomes. |
-| OSIP Platform | Partners and product teams | Stable integration and domain capabilities that support multiple deployments and experiences. | Versioned contracts, compatibility policy, SDK/API direction, and reference implementations. |
+| OSIP Platform | Partners and product teams | A stable spatial/asset/capability model, policy-scoped intent execution, and provider-independent operations across deployments. | Versioned contracts, compatibility policy, SDK/API direction, reference implementations, and a multi-site control-plane hypothesis. |
 
 ## Customer and installer promise
 

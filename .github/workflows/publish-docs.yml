@@ -28,6 +28,8 @@ jobs:
           cache-dependency-path: requirements-docs.lock
       - name: Install documentation dependencies
         run: pip install -r requirements-docs.lock
+      - name: Check English/Russian translation parity
+        run: python scripts/check_translation_parity.py
       - name: Install local PlantUML renderer
         run: sudo apt-get update && sudo apt-get install --yes plantuml
       - name: Render changed PlantUML diagrams

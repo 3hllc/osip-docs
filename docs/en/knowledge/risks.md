@@ -17,6 +17,7 @@ Likelihood and impact use **Low**, **Medium**, or **High**. Risk owners are role
 | R-005 | The reference apartment becomes a bespoke installation with no reusable commissioning evidence. | Medium | High | Require design records, capability matrix, test evidence, and installer-oriented checklists. Trigger: a feature works only through undocumented manual intervention. | Product and installer lead |
 | R-006 | AI features infer or retain sensitive behavioural information without clear consent and retention controls. | Medium | High | Classify data before collection; keep AI optional; introduce consent, retention, and audit requirements. Trigger: proposal to collect audio, images, location, or behavioural history without an approved policy. | Privacy lead |
 | R-007 | Documentation language branches drift, giving users different architecture meaning by language. | Medium | Medium | Keep EN canonical, maintain structural parity, and label untranslated pages explicitly. Trigger: an RU page claims a decision not present in EN. | Documentation lead |
+| R-008 | A provider selection or fallback path is treated as safe without evidence of its authority, physical completion, and degraded behaviour. | Medium | High | Require binding roles, execution-plan verification, outage tests, and policy-gated fallback selection. Trigger: provider acknowledgement is treated as actuator completion or a fallback activates without an approved policy. | Architecture and safety lead |
 
 ## Review and escalation
 

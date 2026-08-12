@@ -30,5 +30,5 @@ MQTT operational security, broker monitoring, reconnect behaviour, and duplicate
 
 ## Links
 
-- [Message Bus](../docs/architecture/message-bus.md)
-- [Event Model](../docs/architecture/event-model.md)
+- [Message Bus](../docs/en/architecture/message-bus.md)
+- [Event Model](../docs/en/architecture/event-model.md)

@@ -17,7 +17,7 @@ source_language: en
 
 MQTT topics — маршрутизация транспорта, а не бизнес-смысл. Начальное соглашение: `osip/<environment>/<classification>/<domain>/<subject>`, где classification — `event`, `command`, `state`, `diagnostic` или `integration`. QoS, retention, expiry и last-will выбираются по контракту. Retained messages требуют health источника и timestamp; они не доказывают текущую достижимость физического устройства.
 
-Raw topics адаптеров остаются в integration namespace. Ingress-адаптер проверяет credentials и payload, сопоставляет identity, нормализует поддерживаемые capability и публикует контракты OSIP с отдельными credentials. Потребители ядра не должны управлять устройствами через raw topics адаптера.
+Raw topics адаптеров остаются в integration namespace. Ingress-адаптер проверяет credentials и payload, сопоставляет identity, нормализует поддерживаемые возможность и публикует контракты OSIP с отдельными credentials. Потребители ядра не должны управлять устройствами через raw topics адаптера.
 
 ## Identity
 
